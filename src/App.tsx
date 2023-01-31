@@ -1,24 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import React from "react";
+import PokemonCard from "./PokemonCard";
+import trainer from "./img/card.jpg";
+import charmander from "./img/charmander.png";
+import Deck from "./Deck";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <Grid
+        container
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Typography variant="h1">Pokémon</Typography>
+        <br />
+        <Grid
+          container
+          direction="row"
+          justifyContent="space-around"
+          alignItems="center"
+          sx={{ border: "5px solid black" }}
         >
-          Learn React
-        </a>
-      </header>
+          <PokemonCard imageSrc={trainer} />
+          <PokemonCard imageSrc={charmander} />
+        </Grid>
+        <br />
+
+        <Deck />
+      </Grid>
     </div>
   );
 }
