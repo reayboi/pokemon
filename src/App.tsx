@@ -1,10 +1,11 @@
 import { Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import React from "react";
-import PokemonCard from "./PokemonCard";
+import { Card } from "./Card";
 import trainer from "./img/card.jpg";
 import charmander from "./img/charmander.png";
 import Deck from "./Deck";
+import CARD_TYPE from "./enums/cardTypes";
 
 function App() {
   return (
@@ -24,8 +25,7 @@ function App() {
           alignItems="center"
           sx={{ border: "5px solid black" }}
         >
-          <PokemonCard imageSrc={trainer} />
-          <PokemonCard imageSrc={charmander} />
+          <Card supertype={CARD_TYPE.POKEMON} name="charmander" image="" />
         </Grid>
         <br />
 
