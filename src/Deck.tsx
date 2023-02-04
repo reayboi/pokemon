@@ -6,10 +6,9 @@ import React, { useState } from "react";
 import { Card } from "./Card";
 
 function createCard(data: any) {
-  let card: React.ReactNode;
   switch (data.supertype) {
     case "Pokémon": {
-      card = (
+      return (
         <Card
           name={data.name}
           supertype={data.supertype}
@@ -23,10 +22,9 @@ function createCard(data: any) {
           description={data.flavorText}
         />
       );
-      break;
     }
     case "Trainer": {
-      card = (
+      return (
         <Card
           name={data.name}
           supertype={data.supertype}
@@ -34,38 +32,27 @@ function createCard(data: any) {
           rules={data.rules}
         />
       );
-      break;
     }
     case "Energy": {
-      let type;
-      if (data.name) {
-        type = data.name.split(" ")[0];
-      }
-      card = (
+      return (
         <Card
           name={data.name}
           supertype={data.supertype}
           image={data.images.small}
-          types={data.types}
-          double={
-            data.subtypes && data.name === "Double Colorless Energy"
-              ? true
-              : false
-          }
+          types={data.name.split(" ")[0]}
+          double={data.subtypes.includes("Special") ? true : false}
           rules={data.rules ? data.rules : []}
         />
       );
-      break;
     }
     default: {
       break;
     }
   }
-  return card;
 }
 
-function loadDeck(): Array<React.ReactNode> {
-  let newDeck = new Array<React.ReactNode>();
+function loadDeck() {
+  let newDeck = new Array<React.ReactElement>();
   deckData.forEach((deck) => {
     if (deck.id === "d-base1-1") {
       deck.cards.forEach((deckCard) => {
@@ -73,7 +60,7 @@ function loadDeck(): Array<React.ReactNode> {
         cardData.forEach((cardCard) => {
           if (deckCard.id === cardCard.id) {
             newCard = createCard(cardCard);
-            newDeck.push(newCard);
+            newDeck.push(newCard!);
           }
         });
       });
@@ -84,11 +71,18 @@ function loadDeck(): Array<React.ReactNode> {
 
 const Deck = () => {
   loadDeck();
-  const [deck, setDeck] = useState<Array<React.ReactNode>>(loadDeck);
+  const [deck, setDeck] = useState<Array<React.ReactElement>>(loadDeck);
   return (
     <ButtonBase
       onClick={() => {
-        console.log(deck);
+        deck.map((card) => {
+          console.log(
+            "card name: ",
+            card.props.name,
+            ", card type: ",
+            card.props.supertype
+          );
+        });
       }}
     >
       <Box

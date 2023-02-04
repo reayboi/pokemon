@@ -2,33 +2,6 @@ import { Box, ButtonBase } from "@mui/material";
 import React from "react";
 import Draggable from "react-draggable";
 import Charmander from "./img/charmander.png";
-import CARD_TYPE from "./enums/cardTypes";
-import ENERGY_TYPE from "./enums/energy";
-import STAGES from "./enums/stages";
-
-// export interface IMoves {
-//   convertedEnergyCost?: number;
-//   cost?: Array<ENERGY_TYPE>;
-//   damage?: string;
-//   name: string;
-//   text?: string;
-// }
-
-// export interface IWeakness {
-//   type: ENERGY_TYPE;
-//   value: string;
-// }
-
-// export interface IResistance {
-//   type: ENERGY_TYPE;
-//   value: string;
-// }
-
-// export interface IAbility {
-//   name: string;
-//   text: string;
-//   type: string;
-// }
 
 export interface ICard {
   supertype: string;
@@ -49,7 +22,7 @@ export interface ICard {
 
 export const Card = ({ supertype, name, image, ...props }: ICard) => {
   return (
-    <Draggable>
+    <Draggable {...props}>
       <ButtonBase
         onMouseOver={() => {
           console.log("name: ", name, " type: ", supertype);
