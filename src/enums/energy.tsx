@@ -10,6 +10,7 @@ enum ENERGY_TYPE {
   FAIRY = "Fairy",
   DRAGON = "Dragon",
   COLORLESS = "Colorless",
+  NULL = "Null",
 }
 
 export default ENERGY_TYPE;

@@ -6,44 +6,44 @@ import CARD_TYPE from "./enums/cardTypes";
 import ENERGY_TYPE from "./enums/energy";
 import STAGES from "./enums/stages";
 
-export interface IMoves {
-  convertedEnergyCost?: number;
-  cost?: Array<ENERGY_TYPE>;
-  damage?: string;
-  name: string;
-  text?: string;
-}
+// export interface IMoves {
+//   convertedEnergyCost?: number;
+//   cost?: Array<ENERGY_TYPE>;
+//   damage?: string;
+//   name: string;
+//   text?: string;
+// }
 
-export interface IWeakness {
-  type: ENERGY_TYPE;
-  value: string;
-}
+// export interface IWeakness {
+//   type: ENERGY_TYPE;
+//   value: string;
+// }
 
-export interface IResistance {
-  type: ENERGY_TYPE;
-  value: string;
-}
+// export interface IResistance {
+//   type: ENERGY_TYPE;
+//   value: string;
+// }
 
-export interface IAbility {
-  name: string;
-  text: string;
-  type: string;
-}
+// export interface IAbility {
+//   name: string;
+//   text: string;
+//   type: string;
+// }
 
 export interface ICard {
-  supertype: CARD_TYPE;
+  supertype: string;
   name: string;
   image: string;
   rules?: Array<string>;
   description?: string;
   hp?: number;
-  type?: ENERGY_TYPE;
-  stage?: STAGES;
-  retreatCost?: Array<ENERGY_TYPE>;
-  weakness?: Array<IWeakness>;
-  resistance?: Array<IResistance>;
-  ability?: Array<IAbility>;
-  moves?: Array<IMoves>;
+  types?: Array<string>;
+  stage?: Array<string>;
+  retreatCost?: Array<string>;
+  weakness?: Array<string>;
+  resistance?: Array<string>;
+  ability?: Array<Object>;
+  moves?: Array<Object>;
   double?: boolean;
 }
 

@@ -1,7 +1,7 @@
 enum STAGES {
-  BASIC = "basic",
-  STAGE_ONE = "stage 1",
-  STAGE_TWO = "stage 2",
+  BASIC = "Basic",
+  STAGE_ONE = "Stage 1",
+  STAGE_TWO = "Stage 2",
 }
 
 export default STAGES;
