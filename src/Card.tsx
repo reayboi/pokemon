@@ -32,10 +32,10 @@ export const Card = ({ supertype, name, image, ...props }: ICard) => {
           component="img"
           className="name"
           sx={{
-            width: "200px",
-            height: "270px",
+            width: "140px",
+            height: "189px",
             border: "5px solid black",
-            borderRadius: "15px",
+            borderRadius: "5px",
           }}
           src={Charmander}
           alt=""

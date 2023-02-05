@@ -30,7 +30,10 @@ function Play() {
         height="47.5vh"
         sx={{ backgroundColor: "#f10013", borderRadius: "10px" }}
       >
-        <Box className="prizes"></Box>
+        <Box
+          className="prizes"
+          sx={{ width: "150px", height: "202.5px", backgroundColor: "purple" }}
+        ></Box>
         <Box className="bench"></Box>
         <Box className="active"></Box>
         <Box className="deck"></Box>
