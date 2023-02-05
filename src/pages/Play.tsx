@@ -32,13 +32,22 @@ function Play() {
       >
         <Box
           className="prizes"
-          sx={{ width: "150px", height: "202.5px", backgroundColor: "purple" }}
-        ></Box>
+          sx={{
+            width: "17.5vw",
+            height: "45vh",
+            backgroundColor: "purple",
+            mt: "1.25vh",
+            ml: "1vw",
+          }}
+        >
+          <Card supertype={CARD_TYPE.POKEMON} name="charmander" image="" />
+          <Card supertype={CARD_TYPE.POKEMON} name="charmander" image="" />
+          <Card supertype={CARD_TYPE.POKEMON} name="charmander" image="" />
+        </Box>
         <Box className="bench"></Box>
         <Box className="active"></Box>
         <Box className="deck"></Box>
         <Box className="discard"></Box>
-        <Card supertype={CARD_TYPE.POKEMON} name="charmander" image="" />
       </Box>
     </Grid>
   );
