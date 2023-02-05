@@ -20,7 +20,10 @@ export interface ICard {
   double?: boolean;
 }
 
-export const Card = ({ supertype, name, image, ...props }: ICard) => {
+export const Card = (
+  { supertype, name, image, ...props }: ICard,
+  draggable: boolean
+) => {
   return (
     <Draggable {...props}>
       <ButtonBase
