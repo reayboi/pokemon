@@ -1,7 +1,6 @@
 import { Box, ButtonBase } from "@mui/material";
-import React from "react";
 import Draggable from "react-draggable";
-import Charmander from "./img/charmander.png";
+import Charmander from "./images/charmander.png";
 
 export interface ICard {
   supertype: string;

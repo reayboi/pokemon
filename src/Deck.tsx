@@ -1,5 +1,5 @@
 import { Box, ButtonBase } from "@mui/material";
-import back from "../src/img/back.png";
+import back from "../src/images/back.png";
 import deckData from "./data/decks.json";
 import cardData from "./data/cards.json";
 import React, { useState } from "react";

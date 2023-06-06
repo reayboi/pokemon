@@ -1,11 +1,7 @@
 import { Box, Divider, Grid, Stack } from "@mui/material";
-import React from "react";
 import { Card } from "../Card";
-import trainer from "./img/card.jpg";
-import charmander from "./img/charmander.png";
 import Deck from "../Deck";
 import CARD_TYPE from "../enums/cardTypes";
-import { relative } from "path";
 
 function Play() {
   return (

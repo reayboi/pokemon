@@ -1,8 +1,7 @@
-import { Grid, IconButton, Typography } from "@mui/material";
-import React from "react";
+import { Grid, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
-import Logo from "../img/logo.png";
+import Logo from "../images/logo.png";
 
 const Menu = () => {
   return (
@@ -14,7 +13,7 @@ const Menu = () => {
       minHeight="100vh"
     >
       <img src={Logo} alt="Pokemon TCG Logo" width={700} height={358.75} />
-      <Link to="/play">
+      <Link to="/SignIn">
         <IconButton sx={{ color: "#9DE34C", fontSize: "150px", mt: "30px" }}>
           <PlayCircleIcon fontSize="inherit" />
         </IconButton>

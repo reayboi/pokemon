@@ -1,0 +1,232 @@
+[debug] [2023-06-06T13:44:41.957Z] ----------------------------------------------------------------------
+[debug] [2023-06-06T13:44:41.958Z] Command:       /Users/brandonreay/.nvm/versions/node/v18.13.0/bin/node /Users/brandonreay/.nvm/versions/node/v18.13.0/bin/firebase emulators:start
+[debug] [2023-06-06T13:44:41.958Z] CLI Version:   12.3.0
+[debug] [2023-06-06T13:44:41.958Z] Platform:      darwin
+[debug] [2023-06-06T13:44:41.958Z] Node Version:  v18.13.0
+[debug] [2023-06-06T13:44:41.959Z] Time:          Tue Jun 06 2023 14:44:41 GMT+0100 (British Summer Time)
+[debug] [2023-06-06T13:44:41.960Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-06T13:44:42.054Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-06T13:44:42.055Z] > authorizing via signed-in user (brandonreay2000@gmail.com)
+[debug] [2023-06-06T13:44:42.549Z] openjdk version "17.0.4.1" 2022-08-12
+OpenJDK Runtime Environment Temurin-17.0.4.1+1 (build 17.0.4.1+1)
+
+[debug] [2023-06-06T13:44:42.549Z] OpenJDK 64-Bit Server VM Temurin-17.0.4.1+1 (build 17.0.4.1+1, mixed mode)
+
+[debug] [2023-06-06T13:44:42.554Z] Parsed Java major version: 17
+[info] i  emulators: Starting emulators: auth, database, storage {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, database, storage"}}
+[debug] [2023-06-06T13:44:46.460Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-06T13:44:46.460Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-06T13:44:46.460Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-06T13:44:46.460Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-06T13:44:46.460Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":9133},{"address":"::1","family":"IPv6","port":9133}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-06-06T13:44:46.488Z] [hub] writing locator at /var/folders/nv/1v4p_j3d3jq90n_ynm6y821m0000gn/T/hub-pokemon-tcg-467f9.json
+[debug] [2023-06-06T13:44:46.499Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pokemon-tcg-467f9 [none]
+[debug] [2023-06-06T13:44:46.775Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pokemon-tcg-467f9 200
+[debug] [2023-06-06T13:44:46.775Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pokemon-tcg-467f9 {"projectId":"pokemon-tcg-467f9","projectNumber":"929696168707","displayName":"pokemon-tcg","name":"projects/pokemon-tcg-467f9","resources":{"hostingSite":"pokemon-tcg-467f9","realtimeDatabaseInstance":"pokemon-tcg-467f9-default-rtdb","storageBucket":"pokemon-tcg-467f9.appspot.com","locationId":"europe-west2"},"state":"ACTIVE","etag":"1_48df30b0-e04a-42c7-a209-1bfc4532d500"}
+[debug] [2023-06-06T13:44:46.776Z] database rules config:  [{"instance":"pokemon-tcg-467f9-default-rtdb","rules":"/Users/brandonreay/Documents/Coding projects/pokemon/database.rules.json"}]
+[debug] [2023-06-06T13:44:46.803Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2023-06-06T13:44:46.803Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-06-06T13:44:46.803Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2023-06-06T13:44:46.803Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/brandonreay/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning"],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/Users/brandonreay/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\"],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2023-06-06T13:44:48.091Z] 14:44:48.090 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"14:44:48.090 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
+[debug] [2023-06-06T13:44:48.165Z] 14:44:48.165 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+ {"metadata":{"emulator":{"name":"database"},"message":"14:44:48.165 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000\n"}}
+[debug] [2023-06-06T13:44:51.095Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-06-06T13:44:51.835Z] Temp file directory for storage emulator: /var/folders/nv/1v4p_j3d3jq90n_ynm6y821m0000gn/T/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /var/folders/nv/1v4p_j3d3jq90n_ynm6y821m0000gn/T/firebase/storage/blobs"}}
+[info] i  ui: downloading ui-v1.11.6.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.11.6.zip..."}}
+[debug] [2023-06-06T13:44:51.867Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.6.zip 
+[debug] [2023-06-06T13:44:51.965Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.6.zip 200
+[debug] [2023-06-06T13:44:51.965Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.6.zip [stream]
+[debug] [2023-06-06T13:44:52.364Z] Data is 3063444
+[debug] [2023-06-06T13:44:52.364Z] [unzip] Entry: client/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2023-06-06T13:44:52.364Z] [unzip] Processing entry: client/
+[debug] [2023-06-06T13:44:52.364Z] [unzip] mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/
+[debug] [2023-06-06T13:44:52.366Z] [unzip] Entry: client/favicon.ico (compressed_size=2497 bytes, uncompressed_size=7406 bytes)
+[debug] [2023-06-06T13:44:52.366Z] [unzip] Processing entry: client/favicon.ico
+[debug] [2023-06-06T13:44:52.366Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client
+[debug] [2023-06-06T13:44:52.366Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/favicon.ico
+[debug] [2023-06-06T13:44:52.369Z] [unzip] Entry: client/apple-touch-icon.png (compressed_size=7231 bytes, uncompressed_size=7367 bytes)
+[debug] [2023-06-06T13:44:52.369Z] [unzip] Processing entry: client/apple-touch-icon.png
+[debug] [2023-06-06T13:44:52.369Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client
+[debug] [2023-06-06T13:44:52.370Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/apple-touch-icon.png
+[debug] [2023-06-06T13:44:52.372Z] [unzip] Entry: client/android-chrome-512x512.png (compressed_size=16987 bytes, uncompressed_size=18186 bytes)
+[debug] [2023-06-06T13:44:52.372Z] [unzip] Processing entry: client/android-chrome-512x512.png
+[debug] [2023-06-06T13:44:52.372Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client
+[debug] [2023-06-06T13:44:52.372Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/android-chrome-512x512.png
+[debug] [2023-06-06T13:44:52.374Z] [unzip] Entry: client/assets/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2023-06-06T13:44:52.374Z] [unzip] Processing entry: client/assets/
+[debug] [2023-06-06T13:44:52.374Z] [unzip] mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/
+[debug] [2023-06-06T13:44:52.375Z] [unzip] Entry: client/assets/extensions/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2023-06-06T13:44:52.375Z] [unzip] Processing entry: client/assets/extensions/
+[debug] [2023-06-06T13:44:52.375Z] [unzip] mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/extensions/
+[debug] [2023-06-06T13:44:52.376Z] [unzip] Entry: client/assets/extensions/default-extension.png (compressed_size=1646 bytes, uncompressed_size=1657 bytes)
+[debug] [2023-06-06T13:44:52.376Z] [unzip] Processing entry: client/assets/extensions/default-extension.png
+[debug] [2023-06-06T13:44:52.376Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/extensions
+[debug] [2023-06-06T13:44:52.376Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/extensions/default-extension.png
+[debug] [2023-06-06T13:44:52.381Z] [unzip] Entry: client/assets/index.85584c3f.js (compressed_size=526096 bytes, uncompressed_size=1859818 bytes)
+[debug] [2023-06-06T13:44:52.381Z] [unzip] Processing entry: client/assets/index.85584c3f.js
+[debug] [2023-06-06T13:44:52.381Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets
+[debug] [2023-06-06T13:44:52.381Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/index.85584c3f.js
+[debug] [2023-06-06T13:44:52.387Z] [unzip] Entry: client/assets/provider-icons/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2023-06-06T13:44:52.387Z] [unzip] Processing entry: client/assets/provider-icons/
+[debug] [2023-06-06T13:44:52.387Z] [unzip] mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons/
+[debug] [2023-06-06T13:44:52.391Z] [unzip] Entry: client/assets/provider-icons/auth_service_oidc.svg (compressed_size=414 bytes, uncompressed_size=858 bytes)
+[debug] [2023-06-06T13:44:52.391Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_oidc.svg
+[debug] [2023-06-06T13:44:52.391Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons
+[debug] [2023-06-06T13:44:52.391Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons/auth_service_oidc.svg
+[debug] [2023-06-06T13:44:52.392Z] [unzip] Entry: client/assets/provider-icons/auth_service_yahoo.svg (compressed_size=577 bytes, uncompressed_size=1182 bytes)
+[debug] [2023-06-06T13:44:52.392Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_yahoo.svg
+[debug] [2023-06-06T13:44:52.392Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons
+[debug] [2023-06-06T13:44:52.392Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons/auth_service_yahoo.svg
+[debug] [2023-06-06T13:44:52.394Z] [unzip] Entry: client/assets/provider-icons/auth_service_phone.svg (compressed_size=261 bytes, uncompressed_size=414 bytes)
+[debug] [2023-06-06T13:44:52.394Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_phone.svg
+[debug] [2023-06-06T13:44:52.394Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons
+[debug] [2023-06-06T13:44:52.394Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons/auth_service_phone.svg
+[debug] [2023-06-06T13:44:52.396Z] [unzip] Entry: client/assets/provider-icons/auth_service_saml.svg (compressed_size=575 bytes, uncompressed_size=1226 bytes)
+[debug] [2023-06-06T13:44:52.396Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_saml.svg
+[debug] [2023-06-06T13:44:52.396Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons
+[debug] [2023-06-06T13:44:52.396Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons/auth_service_saml.svg
+[debug] [2023-06-06T13:44:52.397Z] [unzip] Entry: client/assets/provider-icons/auth_service_mslive.svg (compressed_size=203 bytes, uncompressed_size=378 bytes)
+[debug] [2023-06-06T13:44:52.397Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_mslive.svg
+[debug] [2023-06-06T13:44:52.397Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons
+[debug] [2023-06-06T13:44:52.397Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons/auth_service_mslive.svg
+[debug] [2023-06-06T13:44:52.399Z] [unzip] Entry: client/assets/provider-icons/auth_service_facebook.svg (compressed_size=289 bytes, uncompressed_size=457 bytes)
+[debug] [2023-06-06T13:44:52.399Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_facebook.svg
+[debug] [2023-06-06T13:44:52.399Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons
+[debug] [2023-06-06T13:44:52.399Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons/auth_service_facebook.svg
+[debug] [2023-06-06T13:44:52.400Z] [unzip] Entry: client/assets/provider-icons/auth_service_play_games.svg (compressed_size=565 bytes, uncompressed_size=1173 bytes)
+[debug] [2023-06-06T13:44:52.400Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_play_games.svg
+[debug] [2023-06-06T13:44:52.400Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons
+[debug] [2023-06-06T13:44:52.401Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons/auth_service_play_games.svg
+[debug] [2023-06-06T13:44:52.403Z] [unzip] Entry: client/assets/provider-icons/auth_service_github.svg (compressed_size=466 bytes, uncompressed_size=838 bytes)
+[debug] [2023-06-06T13:44:52.403Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_github.svg
+[debug] [2023-06-06T13:44:52.403Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons
+[debug] [2023-06-06T13:44:52.403Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons/auth_service_github.svg
+[debug] [2023-06-06T13:44:52.405Z] [unzip] Entry: client/assets/provider-icons/auth_service_apple.svg (compressed_size=230 bytes, uncompressed_size=334 bytes)
+[debug] [2023-06-06T13:44:52.405Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_apple.svg
+[debug] [2023-06-06T13:44:52.405Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons
+[debug] [2023-06-06T13:44:52.405Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons/auth_service_apple.svg
+[debug] [2023-06-06T13:44:52.406Z] [unzip] Entry: client/assets/provider-icons/auth_service_google.svg (compressed_size=409 bytes, uncompressed_size=720 bytes)
+[debug] [2023-06-06T13:44:52.406Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_google.svg
+[debug] [2023-06-06T13:44:52.406Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons
+[debug] [2023-06-06T13:44:52.406Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons/auth_service_google.svg
+[debug] [2023-06-06T13:44:52.407Z] [unzip] Entry: client/assets/provider-icons/auth_service_email.svg (compressed_size=228 bytes, uncompressed_size=326 bytes)
+[debug] [2023-06-06T13:44:52.408Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_email.svg
+[debug] [2023-06-06T13:44:52.408Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons
+[debug] [2023-06-06T13:44:52.408Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons/auth_service_email.svg
+[debug] [2023-06-06T13:44:52.409Z] [unzip] Entry: client/assets/provider-icons/auth_service_twitter.svg (compressed_size=444 bytes, uncompressed_size=751 bytes)
+[debug] [2023-06-06T13:44:52.409Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_twitter.svg
+[debug] [2023-06-06T13:44:52.409Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons
+[debug] [2023-06-06T13:44:52.409Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons/auth_service_twitter.svg
+[debug] [2023-06-06T13:44:52.410Z] [unzip] Entry: client/assets/provider-icons/auth_service_game_center.svg (compressed_size=991 bytes, uncompressed_size=3921 bytes)
+[debug] [2023-06-06T13:44:52.410Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_game_center.svg
+[debug] [2023-06-06T13:44:52.410Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons
+[debug] [2023-06-06T13:44:52.410Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/provider-icons/auth_service_game_center.svg
+[debug] [2023-06-06T13:44:52.411Z] [unzip] Entry: client/assets/img/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2023-06-06T13:44:52.411Z] [unzip] Processing entry: client/assets/img/
+[debug] [2023-06-06T13:44:52.411Z] [unzip] mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/img/
+[debug] [2023-06-06T13:44:52.412Z] [unzip] Entry: client/assets/img/database.png (compressed_size=29449 bytes, uncompressed_size=29988 bytes)
+[debug] [2023-06-06T13:44:52.412Z] [unzip] Processing entry: client/assets/img/database.png
+[debug] [2023-06-06T13:44:52.412Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/img
+[debug] [2023-06-06T13:44:52.412Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/img/database.png
+[debug] [2023-06-06T13:44:52.413Z] [unzip] Entry: client/assets/index.b9383ce5.css (compressed_size=37605 bytes, uncompressed_size=321268 bytes)
+[debug] [2023-06-06T13:44:52.413Z] [unzip] Processing entry: client/assets/index.b9383ce5.css
+[debug] [2023-06-06T13:44:52.413Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets
+[debug] [2023-06-06T13:44:52.413Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/index.b9383ce5.css
+[debug] [2023-06-06T13:44:52.415Z] [unzip] Entry: client/assets/index.85584c3f.js.map (compressed_size=1778028 bytes, uncompressed_size=7960238 bytes)
+[debug] [2023-06-06T13:44:52.415Z] [unzip] Processing entry: client/assets/index.85584c3f.js.map
+[debug] [2023-06-06T13:44:52.415Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets
+[debug] [2023-06-06T13:44:52.415Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/assets/index.85584c3f.js.map
+[debug] [2023-06-06T13:44:52.434Z] [unzip] Entry: client/safari-pinned-tab.svg (compressed_size=838 bytes, uncompressed_size=1504 bytes)
+[debug] [2023-06-06T13:44:52.434Z] [unzip] Processing entry: client/safari-pinned-tab.svg
+[debug] [2023-06-06T13:44:52.434Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client
+[debug] [2023-06-06T13:44:52.434Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/safari-pinned-tab.svg
+[debug] [2023-06-06T13:44:52.435Z] [unzip] Entry: client/mstile-150x150.png (compressed_size=5406 bytes, uncompressed_size=5723 bytes)
+[debug] [2023-06-06T13:44:52.435Z] [unzip] Processing entry: client/mstile-150x150.png
+[debug] [2023-06-06T13:44:52.435Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client
+[debug] [2023-06-06T13:44:52.436Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/mstile-150x150.png
+[debug] [2023-06-06T13:44:52.438Z] [unzip] Entry: client/browserconfig.xml (compressed_size=491 bytes, uncompressed_size=822 bytes)
+[debug] [2023-06-06T13:44:52.438Z] [unzip] Processing entry: client/browserconfig.xml
+[debug] [2023-06-06T13:44:52.438Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client
+[debug] [2023-06-06T13:44:52.438Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/browserconfig.xml
+[debug] [2023-06-06T13:44:52.439Z] [unzip] Entry: client/robots.txt (compressed_size=26 bytes, uncompressed_size=26 bytes)
+[debug] [2023-06-06T13:44:52.439Z] [unzip] Processing entry: client/robots.txt
+[debug] [2023-06-06T13:44:52.439Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client
+[debug] [2023-06-06T13:44:52.440Z] [unzip] Writing file: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/robots.txt
+[debug] [2023-06-06T13:44:52.441Z] [unzip] Entry: client/index.html (compressed_size=1363 bytes, uncompressed_size=3064 bytes)
+[debug] [2023-06-06T13:44:52.441Z] [unzip] Processing entry: client/index.html
+[debug] [2023-06-06T13:44:52.441Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client
+[debug] [2023-06-06T13:44:52.441Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/index.html
+[debug] [2023-06-06T13:44:52.443Z] [unzip] Entry: client/favicon-16x16.png (compressed_size=757 bytes, uncompressed_size=777 bytes)
+[debug] [2023-06-06T13:44:52.443Z] [unzip] Processing entry: client/favicon-16x16.png
+[debug] [2023-06-06T13:44:52.443Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client
+[debug] [2023-06-06T13:44:52.443Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/favicon-16x16.png
+[debug] [2023-06-06T13:44:52.446Z] [unzip] Entry: client/manifest.json (compressed_size=246 bytes, uncompressed_size=551 bytes)
+[debug] [2023-06-06T13:44:52.446Z] [unzip] Processing entry: client/manifest.json
+[debug] [2023-06-06T13:44:52.446Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client
+[debug] [2023-06-06T13:44:52.446Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/manifest.json
+[debug] [2023-06-06T13:44:52.452Z] [unzip] Entry: client/favicon-32x32.png (compressed_size=1175 bytes, uncompressed_size=1175 bytes)
+[debug] [2023-06-06T13:44:52.452Z] [unzip] Processing entry: client/favicon-32x32.png
+[debug] [2023-06-06T13:44:52.452Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client
+[debug] [2023-06-06T13:44:52.452Z] [unzip] Writing file: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/favicon-32x32.png
+[debug] [2023-06-06T13:44:52.454Z] [unzip] Entry: client/android-chrome-192x192.png (compressed_size=7602 bytes, uncompressed_size=7834 bytes)
+[debug] [2023-06-06T13:44:52.454Z] [unzip] Processing entry: client/android-chrome-192x192.png
+[debug] [2023-06-06T13:44:52.454Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client
+[debug] [2023-06-06T13:44:52.454Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/client/android-chrome-192x192.png
+[debug] [2023-06-06T13:44:52.455Z] [unzip] Entry: server/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2023-06-06T13:44:52.455Z] [unzip] Processing entry: server/
+[debug] [2023-06-06T13:44:52.455Z] [unzip] mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/server/
+[debug] [2023-06-06T13:44:52.456Z] [unzip] Entry: server/server.js (compressed_size=343746 bytes, uncompressed_size=1346374 bytes)
+[debug] [2023-06-06T13:44:52.456Z] [unzip] Processing entry: server/server.js
+[debug] [2023-06-06T13:44:52.456Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/server
+[debug] [2023-06-06T13:44:52.456Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/server/server.js
+[debug] [2023-06-06T13:44:52.459Z] [unzip] Entry: server/server.js.map (compressed_size=289157 bytes, uncompressed_size=1325651 bytes)
+[debug] [2023-06-06T13:44:52.459Z] [unzip] Processing entry: server/server.js.map
+[debug] [2023-06-06T13:44:52.459Z] [unzip] else mkdir: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/server
+[debug] [2023-06-06T13:44:52.459Z] [unzip] deflating: /Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/server/server.js.map
+[debug] [2023-06-06T13:44:52.463Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-06-06T13:44:52.463Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-06-06T13:44:52.463Z] Starting Emulator UI with command {"binary":"node","args":["/Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/brandonreay/.cache/firebase/emulators/ui-v1.11.6/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-06-06T13:44:52.541Z] Web / API server started at 127.0.0.1:9133
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:9133\n"}}
+[debug] [2023-06-06T13:44:52.541Z] Web / API server started at ::1:9133
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:9133\n"}}
+[debug] [2023-06-06T13:44:52.728Z] >>> [apiv2][query] PUT http://127.0.0.1:9000/.settings/rules.json ns=pokemon-tcg-467f9-default-rtdb
+[debug] [2023-06-06T13:44:52.728Z] >>> [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json "{\n  \"rules\": {\n    \".read\": \"now < 1687993200000\",  // 2023-6-29\n    \".write\": \"now < 1687993200000\",  // 2023-6-29\n  }\n}"
+[debug] [2023-06-06T13:44:52.878Z] 14:44:52.878 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - pokemon-tcg-467f9-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 58ms, init: 0ms
+ {"metadata":{"emulator":{"name":"database"},"message":"14:44:52.878 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - pokemon-tcg-467f9-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 58ms, init: 0ms\n"}}
+[debug] [2023-06-06T13:44:52.921Z] 14:44:52.921 [NamespaceSystem-blocking-namespace-operation-dispatcher-6] INFO com.firebase.core.namespace.StateManager - Namespace pokemon-tcg-467f9-default-rtdb status Active to Active
+ {"metadata":{"emulator":{"name":"database"},"message":"14:44:52.921 [NamespaceSystem-blocking-namespace-operation-dispatcher-6] INFO com.firebase.core.namespace.StateManager - Namespace pokemon-tcg-467f9-default-rtdb status Active to Active\n"}}
+[debug] [2023-06-06T13:44:52.936Z] <<< [apiv2][status] PUT http://127.0.0.1:9000/.settings/rules.json 200
+[debug] [2023-06-06T13:44:52.936Z] <<< [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json {"status":"ok"}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:9133/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI            │
+├────────────────┼────────────────┼────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:9133/auth     │
+├────────────────┼────────────────┼────────────────────────────────┤
+│ Database       │ 127.0.0.1:9000 │ http://127.0.0.1:9133/database │
+├────────────────┼────────────────┼────────────────────────────────┤
+│ Storage        │ 127.0.0.1:9199 │ http://127.0.0.1:9133/storage  │
+└────────────────┴────────────────┴────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2023-06-06T13:44:57.495Z] 14:44:57.494 [FirebaseWorkerPool-1-3] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested 
+namespace pokemon-tcg-467f9, but the emulator is configured for pokemon-tcg-467f9-default-rtdb. To 
+opt-out of single project mode add/set the singleProjectMode: false property in 
+the firebase.json emulators config. 
+ {"metadata":{"emulator":{"name":"database"},"message":"14:44:57.494 [FirebaseWorkerPool-1-3] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested \nnamespace pokemon-tcg-467f9, but the emulator is configured for pokemon-tcg-467f9-default-rtdb. To \nopt-out of single project mode add/set the singleProjectMode: false property in \nthe firebase.json emulators config. \n"}}
+[debug] [2023-06-06T13:44:57.502Z] 14:44:57.502 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - pokemon-tcg-467f9 successfully activated FBKV (SurveyIdle(0)) wait: 1ms, init: 0ms
+ {"metadata":{"emulator":{"name":"database"},"message":"14:44:57.502 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - pokemon-tcg-467f9 successfully activated FBKV (SurveyIdle(0)) wait: 1ms, init: 0ms\n"}}
