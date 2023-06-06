@@ -7,6 +7,7 @@ import Play from "./pages/Play";
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set } from "firebase/database";
 import { getAuth, connectAuthEmulator } from "firebase/auth";
+
 import SignIn from "./pages/SignIn";
 
 const firebaseConfig = {

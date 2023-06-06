@@ -5,10 +5,35 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useState } from "react";
+import { NavigateFunction, useNavigate } from "react-router-dom";
 
-function handleSignIn() {}
+function handleSignIn(
+  email: string,
+  password: string,
+  navigate?: NavigateFunction
+) {
+  const auth = getAuth();
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      console.log(user);
+      // navigate("/play");
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+    });
+}
 
 function SignIn() {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <Grid
       container
@@ -29,10 +54,13 @@ function SignIn() {
         }}
       >
         <TextField
-          id="username"
+          id="email"
           label="Username"
           variant="outlined"
           sx={{ paddingBottom: 3 }}
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
         />
         <TextField
           id="password"
@@ -40,8 +68,16 @@ function SignIn() {
           variant="outlined"
           sx={{ paddingBottom: 3 }}
           type="password"
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
         />
-        <Button variant="contained" onClick={handleSignIn}>
+        <Button
+          variant="contained"
+          onClick={() => {
+            handleSignIn(email, password, navigate);
+          }}
+        >
           Sign In
         </Button>
       </FormControl>
