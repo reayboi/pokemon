@@ -9,6 +9,8 @@ import { getDatabase, ref, set } from "firebase/database";
 import { getAuth, connectAuthEmulator } from "firebase/auth";
 
 import SignIn from "./pages/SignIn";
+import CreateAccount from "./pages/CreateAccount";
+import { Typography } from "@mui/material";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAxD1HK6TkL84i3HbNDnWKIb8tncoL9aKA",
@@ -29,7 +31,7 @@ connectAuthEmulator(auth, "http://localhost:9099");
 // const firestore = getFirxestore();
 
 const database = getDatabase(app);
-console.log(database);
+// console.log(database);
 set(ref(database, "users/" + "user1"), {
   username: "Brandon",
   email: "brandon.reay@and,digital",
@@ -50,6 +52,10 @@ const router = createBrowserRouter([
     path: "SignIn",
     element: <SignIn />,
   },
+  {
+    path: "CreateAccount",
+    element: <CreateAccount />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(
@@ -58,6 +64,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
+    <Typography variant="body2">NavBar goes here</Typography>
     <RouterProvider router={router} />
   </React.StrictMode>
 );

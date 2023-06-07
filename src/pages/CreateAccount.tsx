@@ -5,17 +5,17 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { useState } from "react";
-import { Link, NavigateFunction, useNavigate } from "react-router-dom";
+import { NavigateFunction, useNavigate } from "react-router-dom";
 
-function handleSignIn(
+function handleCreateAccount(
   email: string,
   password: string,
   navigate?: NavigateFunction
 ) {
   const auth = getAuth();
-  signInWithEmailAndPassword(auth, email, password)
+  createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
@@ -30,7 +30,7 @@ function handleSignIn(
     });
 }
 
-function SignIn() {
+function CreateAccount() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -43,7 +43,7 @@ function SignIn() {
       minHeight="100vh"
     >
       <Typography variant="h2" sx={{ paddingBottom: 3, color: "white" }}>
-        Sign In
+        Create an account
       </Typography>
       <FormControl
         sx={{
@@ -53,15 +53,21 @@ function SignIn() {
           width: "300px",
         }}
       >
+        <Typography variant="body2" sx={{ paddingBottom: 2 }}>
+          Enter email address:
+        </Typography>
         <TextField
           id="email"
           label="Email address"
           variant="outlined"
-          sx={{ paddingBottom: 3 }}
+          sx={{ paddingBottom: 2 }}
           onChange={(e) => {
             setEmail(e.target.value);
           }}
         />
+        <Typography variant="body2" sx={{ paddingBottom: 2 }}>
+          Enter password:
+        </Typography>
         <TextField
           id="password"
           label="Password"
@@ -75,20 +81,14 @@ function SignIn() {
         <Button
           variant="contained"
           onClick={() => {
-            handleSignIn(email, password, navigate);
+            handleCreateAccount(email, password, navigate);
           }}
-          sx={{ marginBottom: 3 }}
         >
-          Sign In
+          Create
         </Button>
-        <Link to="/CreateAccount">
-          <Typography variant="body2" sx={{ textAlign: "center" }}>
-            Don't have an account? Register here
-          </Typography>
-        </Link>
       </FormControl>
     </Grid>
   );
 }
 
-export default SignIn;
+export default CreateAccount;
