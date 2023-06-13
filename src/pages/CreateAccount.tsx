@@ -12,7 +12,7 @@ import { NavigateFunction, useNavigate } from "react-router-dom";
 function handleCreateAccount(
   email: string,
   password: string,
-  navigate?: NavigateFunction
+  navigate: NavigateFunction
 ) {
   const auth = getAuth();
   createUserWithEmailAndPassword(auth, email, password)
@@ -20,7 +20,7 @@ function handleCreateAccount(
       // Signed in
       const user = userCredential.user;
       console.log(user);
-      // navigate("/play");
+      navigate("/play");
       // ...
     })
     .catch((error) => {

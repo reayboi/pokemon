@@ -6,18 +6,18 @@ import {
   Typography,
 } from "@mui/material";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavigateFunction, useNavigate } from "react-router-dom";
+import { User } from "../types/User";
 
 function handleSignIn(
   email: string,
   password: string,
-  navigate?: NavigateFunction
+  navigate: NavigateFunction
 ) {
   const auth = getAuth();
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      // Signed in
       const user = userCredential.user;
       console.log(user);
       // navigate("/play");
@@ -34,6 +34,20 @@ function SignIn() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const [userInfo, setUserInfo] = useState("");
+
+  useEffect(() => {
+    setUserInfo(JSON.parse(window.localStorage.getItem("userInfo")!));
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("userInfo", userInfo);
+  }, [userInfo]);
+
+  if (userInfo) {
+    navigate("/play");
+  }
   return (
     <Grid
       container

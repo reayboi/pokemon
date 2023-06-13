@@ -1,14 +1,9 @@
-10:40:24.941 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
-10:40:25.016 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
-10:40:29.469 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - pokemon-tcg-467f9-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 75ms, init: 0ms
-10:40:29.513 [NamespaceSystem-blocking-namespace-operation-dispatcher-7] INFO com.firebase.core.namespace.StateManager - Namespace pokemon-tcg-467f9-default-rtdb status Active to Active
-10:42:57.266 [FirebaseWorkerPool-1-3] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested 
+15:06:03.513 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+15:06:03.587 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+15:06:07.708 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - pokemon-tcg-467f9-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 61ms, init: 0ms
+15:06:07.749 [NamespaceSystem-blocking-namespace-operation-dispatcher-6] INFO com.firebase.core.namespace.StateManager - Namespace pokemon-tcg-467f9-default-rtdb status Active to Active
+15:06:38.803 [FirebaseWorkerPool-1-3] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested 
 namespace pokemon-tcg-467f9, but the emulator is configured for pokemon-tcg-467f9-default-rtdb. To 
 opt-out of single project mode add/set the singleProjectMode: false property in 
 the firebase.json emulators config. 
-10:42:57.287 [NamespaceSystem-akka.actor.default-dispatcher-11] INFO com.firebase.core.namespace.NamespaceActor - pokemon-tcg-467f9 successfully activated FBKV (SurveyIdle(0)) wait: 7ms, init: 0ms
-11:05:51.850 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
-11:05:51.859 [NamespaceSystem-akka.actor.default-dispatcher-34] INFO com.firebase.core.namespace.Terminator$Terminator - 2 actors left to terminate: pokemon-tcg-467f9-default-rtdb, pokemon-tcg-467f9
-11:05:51.864 [NamespaceSystem-akka.actor.default-dispatcher-37] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for pokemon-tcg-467f9
-11:05:51.864 [NamespaceSystem-akka.actor.default-dispatcher-35] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for pokemon-tcg-467f9-default-rtdb
-11:05:51.867 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.
+15:06:38.812 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - pokemon-tcg-467f9 successfully activated FBKV (SurveyIdle(0)) wait: 3ms, init: 0ms
