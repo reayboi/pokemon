@@ -9,6 +9,7 @@ import { getDatabase, ref, set } from "firebase/database";
 import { getAuth, connectAuthEmulator } from "firebase/auth";
 import SignIn from "./pages/SignIn";
 import CreateAccount from "./pages/CreateAccount";
+import AuthContextProvider from "./utils/contexts/AuthConextProvider";
 import Banner from "./common/Banner";
 
 const firebaseConfig = {
@@ -59,7 +60,9 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    {/* <Banner /> */}
-    <RouterProvider router={router} />
+    <AuthContextProvider>
+      {/* <Banner /> */}
+      <RouterProvider router={router} />
+    </AuthContextProvider>
   </React.StrictMode>
 );

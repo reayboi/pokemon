@@ -2,8 +2,10 @@ import { Box, Divider, Grid, Stack } from "@mui/material";
 import { Card } from "../Card";
 import Deck from "../Deck";
 import CARD_TYPE from "../enums/cardTypes";
+import Banner from "../common/Banner";
 
 function Play() {
+  // const {token, setToken, userData, setUserData} = useContext(AuthContext);
   return (
     <Grid
       container
@@ -12,6 +14,7 @@ function Play() {
       alignItems="center"
       minHeight="100vh"
     >
+      <Banner />
       <Box
         className="opponent"
         width="97.5vw"

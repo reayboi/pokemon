@@ -1,53 +1,76 @@
 import {
+  Alert,
   Button,
   FormControl,
   Grid,
   TextField,
   Typography,
 } from "@mui/material";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useEffect, useState } from "react";
-import { Link, NavigateFunction, useNavigate } from "react-router-dom";
-import { User } from "../types/User";
-
-function handleSignIn(
-  email: string,
-  password: string,
-  navigate: NavigateFunction
-) {
-  const auth = getAuth();
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      console.log(user);
-      // navigate("/play");
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorCode, errorMessage);
-    });
-}
+import {
+  browserLocalPersistence,
+  getAuth,
+  setPersistence,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { useContext, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import AuthContext from "../utils/contexts/AuthContext";
+import { UserData } from "../types/User";
+import Banner from "../common/Banner";
 
 function SignIn() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [authError, setAuthError] = useState<boolean>(false);
+  const { setToken, userData, setUserData } = useContext(AuthContext);
 
-  const [userInfo, setUserInfo] = useState("");
+  function handleSignIn(email: string, password: string) {
+    const auth = getAuth();
+    setPersistence(auth, browserLocalPersistence);
+    signInWithEmailAndPassword(auth, email, password)
+      .then(async (userCredential) => {
+        setAuthError(false);
+        const user = userCredential.user;
+        setUserData({
+          username: user.displayName!,
+          email: user.email!,
+          uid: user.uid!,
+        });
+        // const token = await user.getIdToken();
+        // setToken(token);
+        window.localStorage.setItem("userData", JSON.stringify(user));
+        navigate("/play");
+      })
+      .catch((error) => {
+        setAuthError(true);
+      });
+  }
+
+  const getLocalUser = async () => {
+    let data = await localStorage.getItem("userData");
+    if (!data) return null;
+    let localData: UserData = JSON.parse(data);
+    setUserData({
+      username: localData.displayName,
+      email: localData.email,
+      uid: localData.uid,
+    });
+    return data;
+  };
+
+  const handleEffect = async () => {
+    const data = await getLocalUser();
+    if (data) {
+      navigate("/play");
+    }
+  };
 
   useEffect(() => {
-    setUserInfo(JSON.parse(window.localStorage.getItem("userInfo")!));
+    handleEffect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    window.localStorage.setItem("userInfo", userInfo);
-  }, [userInfo]);
-
-  if (userInfo) {
-    navigate("/play");
-  }
   return (
     <Grid
       container
@@ -56,6 +79,20 @@ function SignIn() {
       alignItems="center"
       minHeight="100vh"
     >
+      <Banner />
+      {authError && (
+        <Alert
+          severity="error"
+          sx={{
+            position: "absolute",
+            top: 25,
+            width: 450,
+          }}
+        >
+          Looks like there was a problem while signing in, try again!
+        </Alert>
+      )}
+
       <Typography variant="h2" sx={{ paddingBottom: 3, color: "white" }}>
         Sign In
       </Typography>
@@ -89,7 +126,7 @@ function SignIn() {
         <Button
           variant="contained"
           onClick={() => {
-            handleSignIn(email, password, navigate);
+            handleSignIn(email, password);
           }}
           sx={{ marginBottom: 3 }}
         >
@@ -101,6 +138,9 @@ function SignIn() {
           </Typography>
         </Link>
       </FormControl>
+      <Typography variant="body1" sx={{ paddingTop: 3, color: "white" }}>
+        {userData ? JSON.stringify(userData) : " no data"}
+      </Typography>
     </Grid>
   );
 }
