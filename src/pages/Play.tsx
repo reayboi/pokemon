@@ -14,7 +14,9 @@ function Play() {
       alignItems="center"
       minHeight="100vh"
     >
-      <Banner />
+      <div style={{ position: "absolute", top: 0, left: 0, zIndex: 999 }}>
+        <Banner />
+      </div>
       <Box
         className="opponent"
         width="97.5vw"

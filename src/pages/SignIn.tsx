@@ -79,7 +79,9 @@ function SignIn() {
       alignItems="center"
       minHeight="100vh"
     >
-      <Banner />
+      <div style={{ position: "absolute", top: 0, left: 0 }}>
+        <Banner />
+      </div>
       {authError && (
         <Alert
           severity="error"

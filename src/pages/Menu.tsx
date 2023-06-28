@@ -13,7 +13,9 @@ const Menu = () => {
       alignItems="center"
       minHeight="100vh"
     >
-      <Banner />
+      <div style={{ position: "absolute", top: 0, left: 0 }}>
+        <Banner />
+      </div>
       <img src={Logo} alt="Pokemon TCG Logo" width={700} height={358.75} />
       <Link to="/SignIn">
         <IconButton sx={{ color: "#9DE34C", fontSize: "150px", mt: "30px" }}>
